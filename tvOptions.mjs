@@ -11,7 +11,8 @@ async function main() {
     console.log("4. Quit");
 
     const inputString = await $`read -p "Enter your choice (1/2/3/4): " && echo $REPLY`;
-    const choice = parseFloat(inputString);
+    const choice = Number(inputString.stdout);
+    console.log(choice);
 
     switch (choice) {
       case 1:
